@@ -31,11 +31,12 @@
 \RequirePackage[usenames,dvipsnames]{color}
 \RequirePackage{pgfplots}
 \RequirePackage[hang,margin=3ex,small,bf,labelsep=endash]{caption}
-\RequirePackage{hyperref}
+\RequirePackage[hidelinks]{hyperref}
 \RequirePackage{cleveref} 
 
 \pgfplotsset{compat=newest}
-\epstopdfsetup{outdir=./figures/}
+\epstopdfsetup{update,suffix=.generated,outdir=./figures/}
+\graphicspath{{./figures/}}
 
 \pagestyle{fancy}
 
