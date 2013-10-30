@@ -4,14 +4,15 @@
 
 \DeclareOption{swedish}{\PassOptionsToPackage{swedish}{babel}}
 \DeclareOption{english}{\PassOptionsToPackage{english}{babel}}
+\DeclareOption{debug}{\PassOptionsToPackage{showframe}{geometry}}
 \ExecuteOptions{swedish}
 \ProcessOptions\relax
+
 \RequirePackage{babel}
+\RequirePackage[a4paper,head=30pt,bottom=1.2in]{geometry}
 
 \RequirePackage{lmodern} % Latin Modern
 \RequirePackage{courier} % Courier
-
-\RequirePackage[a4paper]{geometry}
 \RequirePackage[utf8]{inputenc}
 \RequirePackage[T1]{fontenc}
 
@@ -19,7 +20,7 @@
 \RequirePackage{hyphenat} % Avstavning
 \RequirePackage{microtype} % Bättre kerning
 
-\RequirePackage{graphicx,epstopdf,float}
+\RequirePackage{graphicx,epstopdf}
 \RequirePackage{amsmath,amssymb,amsfonts,amsthm} 
 \RequirePackage{commath} % Typsättning av differentialer osv.
 \RequirePackage{cancel}
@@ -32,6 +33,7 @@
 \RequirePackage{pgfplots}
 \RequirePackage[hang,margin=3ex,small,bf,labelsep=endash]{caption}
 \RequirePackage[hidelinks]{hyperref}
+\RequirePackage{float}
 \RequirePackage{cleveref} 
 
 \pgfplotsset{compat=newest}
@@ -48,9 +50,14 @@
 \let\oldtitle\title
 \renewcommand{\title}[1]{\newcommand{\thetitle}{#1}\oldtitle{#1}} 
 
+\renewcommand{\footnoterule}{
+  \kern -3pt
+  \hrule width \textwidth height 0.4pt
+  \kern 2.6pt
+}
+
 \AtBeginDocument{
-	\input{title.tex}
-	\headheight 30pt
+	\input{title}
 	\lhead{\theauthor}
 	\rhead{\thetitle\\\today}
 	\cfoot{\thepage}
