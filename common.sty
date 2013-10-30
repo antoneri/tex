@@ -1,0 +1,78 @@
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{common}
+
+\DeclareOption{swedish}{\PassOptionsToPackage{swedish}{babel}}
+\DeclareOption{english}{\PassOptionsToPackage{english}{babel}}
+\ExecuteOptions{swedish}
+\ProcessOptions\relax
+
+\RequirePackage{babel}
+\RequirePackage[l2tabu,orthodox]{nag}
+
+\RequirePackage{lmodern} % Latin Modern
+\RequirePackage{courier} % Courier
+
+\RequirePackage[a4paper]{geometry}
+\RequirePackage[utf8]{inputenc}
+\RequirePackage[T1]{fontenc}
+
+\RequirePackage{parskip}
+\RequirePackage{hyphenat}
+\RequirePackage{microtype}
+
+\RequirePackage{graphicx,epstopdf,float}
+\RequirePackage{amsmath,amssymb,amsfonts,amsthm} 
+\RequirePackage{cancel}
+\RequirePackage{siunitx}
+
+\RequirePackage{cleveref}
+\RequirePackage{framed}
+\RequirePackage{fancyhdr}
+\RequirePackage{listings}
+\RequirePackage{color}
+\RequirePackage{url}
+\RequirePackage[hang,margin=3ex,small,bf,labelsep=endash]{caption}
+
+\epstopdfsetup{outdir=./figures/}
+
+\pagestyle{fancy}
+
+\newcommand{\dx}[1][x]{\mathrm{d}{#1}}
+
+\newcommand{\inputcode}[2][C]{\lstinputlisting[language=#1]{#2}}
+
+\let\oldauthor\author
+\renewcommand{\author}[1]{\newcommand{\theauthor}{#1}\oldauthor{#1}}
+
+\let\oldtitle\title
+\renewcommand{\title}[1]{\newcommand{\thetitle}{#1}\oldtitle{#1}} 
+
+\AtBeginDocument{
+	\input{title.tex}
+	\headheight 30pt
+	\lhead{\theauthor}
+	\rhead{\thetitle\\\today}
+	\cfoot{\thepage}
+}
+
+\definecolor{mygreen}{rgb}{0,0.6,0}
+\definecolor{mylilas}{rgb}{0.7,0.2,0.8}
+\definecolor{mygray}{rgb}{0.5,0.5,0.5}
+
+\lstset{
+	title=\ttfamily\lstname,
+	basicstyle=\ttfamily\footnotesize,
+	breakatwhitespace=false,
+	breaklines=true,
+	showstringspaces=false,
+	numbers=left,
+	numbersep=10pt,
+	keywordstyle=\color{blue},
+	identifierstyle=\color{black},
+	stringstyle=\color{mylilas},
+	commentstyle=\itshape\color{mygreen},
+	numberstyle=\scriptsize\color{mygray},
+	tabsize=4
+}
+
+\endinput
