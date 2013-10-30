@@ -1,13 +1,12 @@
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesPackage{common}
+\RequirePackage[l2tabu,orthodox]{nag} % Validation
 
 \DeclareOption{swedish}{\PassOptionsToPackage{swedish}{babel}}
 \DeclareOption{english}{\PassOptionsToPackage{english}{babel}}
 \ExecuteOptions{swedish}
 \ProcessOptions\relax
-
 \RequirePackage{babel}
-\RequirePackage[l2tabu,orthodox]{nag}
 
 \RequirePackage{lmodern} % Latin Modern
 \RequirePackage{courier} % Courier
@@ -16,24 +15,24 @@
 \RequirePackage[utf8]{inputenc}
 \RequirePackage[T1]{fontenc}
 
-\RequirePackage{parskip}
-\RequirePackage{hyphenat}
-\RequirePackage{microtype}
+\RequirePackage{parskip} % Blank rad istället för indrag
+\RequirePackage{hyphenat} % Avstavning
+\RequirePackage{microtype} % Bättre kerning
 
 \RequirePackage{graphicx,epstopdf,float}
 \RequirePackage{amsmath,amssymb,amsfonts,amsthm} 
-\RequirePackage{commath}
+\RequirePackage{commath} % Typsättning av differentialer osv.
 \RequirePackage{cancel}
-\RequirePackage{siunitx}
+\RequirePackage{siunitx} % SI-enheter
+\RequirePackage{pgfplots}
+\RequirePackage{listings}
 
-\RequirePackage{cleveref}
 \RequirePackage{framed}
 \RequirePackage{fancyhdr}
-\RequirePackage{listings}
-\RequirePackage{color}
-\RequirePackage{url}
+\RequirePackage[usenames,dvipsnames]{color}
 \RequirePackage[hang,margin=3ex,small,bf,labelsep=endash]{caption}
-\RequirePackage{pgfplots}
+\RequirePackage{hyperref}
+\RequirePackage{cleveref} 
 
 \pgfplotsset{compat=newest}
 \epstopdfsetup{outdir=./figures/}
@@ -56,10 +55,6 @@
 	\cfoot{\thepage}
 }
 
-\definecolor{mygreen}{rgb}{0,0.6,0}
-\definecolor{mylilas}{rgb}{0.7,0.2,0.8}
-\definecolor{mygray}{rgb}{0.5,0.5,0.5}
-
 \lstset{
 	title=\ttfamily\lstname,
 	basicstyle=\ttfamily\footnotesize,
@@ -68,11 +63,11 @@
 	showstringspaces=false,
 	numbers=left,
 	numbersep=10pt,
-	keywordstyle=\color{blue},
-	identifierstyle=\color{black},
-	stringstyle=\color{mylilas},
-	commentstyle=\itshape\color{mygreen},
-	numberstyle=\scriptsize\color{mygray},
+	keywordstyle=\color{NavyBlue},
+	identifierstyle=\color{Black},
+	stringstyle=\color{Purple},
+	commentstyle=\itshape\color{ForestGreen},
+	numberstyle=\scriptsize\color{Gray},
 	tabsize=4
 }
 
