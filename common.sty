@@ -21,7 +21,7 @@
 \RequirePackage{microtype} % Bättre kerning
 
 \RequirePackage{graphicx,epstopdf}
-\RequirePackage{amsmath,amssymb,amsthm} 
+\RequirePackage{amsmath,amssymb,amsthm}
 \RequirePackage{commath} % Typsättning av differentialer osv.
 \RequirePackage{cancel}
 \RequirePackage{siunitx} % SI-enheter
@@ -34,7 +34,7 @@
 \RequirePackage[hang,margin=3ex,small,bf,labelsep=endash]{caption}
 \RequirePackage[hidelinks]{hyperref}
 \RequirePackage{float}
-\RequirePackage{cleveref} 
+\RequirePackage{cleveref}
 
 \pgfplotsset{compat=newest}
 \epstopdfsetup{update,suffix=.generated,outdir=./figures/}
@@ -48,7 +48,7 @@
 \renewcommand{\author}[1]{\newcommand{\theauthor}{#1}\oldauthor{#1}}
 
 \let\oldtitle\title
-\renewcommand{\title}[1]{\newcommand{\thetitle}{#1}\oldtitle{#1}} 
+\renewcommand{\title}[1]{\newcommand{\thetitle}{#1}\oldtitle{#1}}
 
 \renewcommand{\footnoterule}{
   \kern -3pt
@@ -57,26 +57,26 @@
 }
 
 \AtBeginDocument{
-	\input{title}
-	\lhead{\theauthor}
-	\rhead{\thetitle\\\today}
-	\cfoot{\thepage}
+  \input{title}
+  \lhead{\theauthor}
+  \rhead{\thetitle\\\today}
+  \cfoot{\thepage}
 }
 
 \lstset{
-	title=\ttfamily\lstname,
-	basicstyle=\ttfamily\footnotesize,
-	breakatwhitespace=false,
-	breaklines=true,
-	showstringspaces=false,
-	numbers=left,
-	numbersep=10pt,
-	keywordstyle=\color{NavyBlue},
-	identifierstyle=\color{Black},
-	stringstyle=\color{Purple},
-	commentstyle=\itshape\color{ForestGreen},
-	numberstyle=\scriptsize\color{Gray},
-	tabsize=4
+  title=\ttfamily\lstname,
+  basicstyle=\ttfamily\footnotesize,
+  breakatwhitespace=false,
+  breaklines=true,
+  showstringspaces=false,
+  numbers=left,
+  numbersep=10pt,
+  keywordstyle=\color{NavyBlue},
+  identifierstyle=\color{Black},
+  stringstyle=\color{Purple},
+  commentstyle=\itshape\color{ForestGreen},
+  numberstyle=\scriptsize\color{Gray},
+  tabsize=4
 }
 
 \endinput
