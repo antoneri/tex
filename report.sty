@@ -11,10 +11,17 @@
 \RequirePackage{babel}
 \RequirePackage[a4paper,head=30pt,bottom=1.2in]{geometry}
 
-\RequirePackage{lmodern}
 \RequirePackage{courier}
-\RequirePackage[utf8]{inputenc}
-\RequirePackage[T1]{fontenc}
+
+\RequirePackage{ifxetex}
+
+\ifxetex
+  \RequirePackage{fontspec}
+\else
+  \RequirePackage[T1]{fontenc}
+  \RequirePackage[utf8]{inputenc}
+  \RequirePackage{lmodern}
+\fi
 
 %\RequirePackage{parskip}
 \RequirePackage{hyphenat}
