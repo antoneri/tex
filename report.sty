@@ -44,6 +44,7 @@
 \RequirePackage{float}
 \RequirePackage{cleveref}
 \RequirePackage{subcaption}
+\RequirePackage{todonotes}
 
 \pgfplotsset{compat=newest}
 \epstopdfsetup{update,suffix=.generated,outdir=./figures/}
@@ -52,9 +53,6 @@
 \pagestyle{fancy}
 
 \newcommand{\inputcode}[2][Matlab]{\lstinputlisting[language=#1]{#2}}
-
-\newcommand{\fixme}{\marginpar{\small {\color{red}FIX ME!}}}
-\newcommand{\todo}[1]{\marginpar{\small {\color{red}TODO}\\#1}}
 
 \let\oldauthor\author
 \renewcommand{\author}[1]{\newcommand{\theauthor}{#1}\oldauthor{#1}}
