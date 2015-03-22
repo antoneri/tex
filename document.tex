@@ -1,6 +1,41 @@
 \documentclass[11pt]{article}
 \usepackage{report}
 
+\title{Title}
+\author{Namn Efternamn (cas0123@student.umu.se)}
+
+\date{\today}
+
 \begin{document}
+\begin{titlepage}
+  \maketitle
+  \thispagestyle{fancy}
+  \lhead{
+    Department\\
+    Umeå Universitet
+  }
+  \rhead{\today}
+  \begin{abstract}
+
+  \end{abstract}
+  \cfoot{
+    Course\\
+    Supervisor
+  }
+\end{titlepage}
+
+\lhead{\theauthor}
+\rhead{\thetitle\\\today}
+\cfoot{\thepage}
+
+
+
+\begin{thebibliography}{9}
+\end{thebibliography}
+
+\clearpage
+\appendix
+\section{Appendix}
 
 \end{document}
+

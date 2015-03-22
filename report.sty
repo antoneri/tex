@@ -46,6 +46,9 @@
 \RequirePackage{subcaption}
 \RequirePackage{todonotes}
 
+\RequirePackage{titling}
+\setlength{\droptitle}{3em}
+
 \pgfplotsset{compat=newest}
 \epstopdfsetup{update,suffix=.generated,outdir=./figures/}
 \graphicspath{{./figures/}}
@@ -64,13 +67,6 @@
   \kern -3pt
   \hrule width \textwidth height 0.4pt
   \kern 2.6pt
-}
-
-\AtBeginDocument{
-  \input{titlepage}
-  \lhead{\theauthor}
-  \rhead{\thetitle\\\today}
-  \cfoot{\thepage}
 }
 
 \lstset{
