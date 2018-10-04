@@ -1,1 +1,0 @@
-[![PDF Status](https://www.sharelatex.com/github/repos/antoneri/tex/builds/latest/badge.svg)](https://www.sharelatex.com/github/repos/antoneri/tex/builds/latest/output.pdf)
